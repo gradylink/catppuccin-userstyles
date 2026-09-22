@@ -912,7 +912,7 @@
       color: @green !important;
     }
 
-    // Home
+    // Rewards Home
     .maxWidth:has(> div > img[src="/client/img/home/left.png"]) > .flex-column {
       background-color: @base;
       border-color: @surface0 !important;
@@ -920,6 +920,15 @@
 
     .flex-center:has(.maxWidth > div > img[src="/client/img/home/left.png"]) > .flex-center > .maxWidth {
       background-color: @base;
+    }
+
+    // Upgrade Dialog
+    [style*="border-color: rgb(253, 216, 53);"] {
+      border-color: @yellow !important;
+    }
+
+    img[src="/client/img/pro/star.svg"] {
+      filter: @yellow-filter;
     }
 
     // Privacy Policy
