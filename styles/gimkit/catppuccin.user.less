@@ -727,7 +727,9 @@
       border-color: @accent;
     }
 
+    // Level Section in Gimkit Home
     [style*="background-image: linear-gradient(rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);"] {
+      border-color: @surface2;
       background-color: @surface0;
       background-image: none !important;
 
@@ -750,16 +752,19 @@
       }
     }
 
-    .ant-space:has([style*="background-image: linear-gradient(rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);"]) > .ant-space-item:last-child > div > div[style] {
+    // Limits Section in Gimkit Home
+    .ant-space:has([style*="background-image: linear-gradient(rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);"]) > .ant-space-item:last-child > div > div:last-child {
       background-color: @surface0;
-      border-color: @text;
+      border-color: @surface2;
 
-      [style*="color: rgba(255, 255, 255, 0.9);"] {
-        color: @text !important;
-      }
-
-      > .ant-space > .ant-space-item > div > div:not(.ant-alert) > div:last-child {
+      // Progress Bar
+      .ant-space-item > div > :not(.ant-alert) > div:last-child {
         background-color: @base;
+        > :first-child > div {
+          span {
+            color: @text !important;
+          }
+        }
 
         > :last-child {
           background-color: @green;
@@ -823,6 +828,7 @@
 
     #cosmos-content .ant-space-item > div:has(img[src^="https://www.gimkit.com/assets/map/stickers"]) {
       background-image: linear-gradient(179deg, @peach 0%, @red 100%);
+      border-color: @surface0;
 
       * {
         color: @base;
