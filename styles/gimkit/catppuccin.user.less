@@ -46,6 +46,16 @@
 
     .ant-input-number {
       border-color: @surface2;
+
+      &:hover,
+      &:focus {
+        border-color: @accent;
+      }
+
+      .ant-input-number-handler {
+        background-color: @base;
+        border-color: @surface2 !important;
+      }
     }
 
     footer {
