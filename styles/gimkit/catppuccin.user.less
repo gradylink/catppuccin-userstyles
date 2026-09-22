@@ -834,6 +834,15 @@
       }
     }
 
+    // Search no results (still creative discovery)
+    [style="color: rgb(255, 255, 0);"] {
+      color: @yellow !important;
+    }
+
+    :has(> div > [style="color: rgb(255, 255, 0);"]) {
+      background-color: @base;
+    }
+
     // Creative Creaton Dialog
     [style="border-color: rgb(255, 255, 0);"] {
       border-color: @accent !important;
