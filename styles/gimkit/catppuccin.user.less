@@ -299,12 +299,26 @@
       > .flex-center {
         background-color: @base;
 
-        div:has(div) {
+        div:has(div):not(:has(> .ant-input-number-outlined)) {
           background-color: @mantle;
 
-          .flex-column {
+          // Mode limit warning (free plan)
+          .flex-column:has(.fa-exclamation-circle) {
+            * {
+              color: @base;
+            }
+
+            button {
+              background-color: @yellow !important;
+            }
+
             background-color: fade(@yellow, 85%);
             border-color: @yellow;
+          }
+
+          // Tycoon settings (maybe other 1d modes idk)
+          .flex-column:not(:has(.fa-exclamation-circle)) {
+            border-color: @surface2;
           }
 
           > .maxWidth > .vc {
@@ -482,6 +496,10 @@
       &:hover {
         background-color: @base !important;
         border-color: @accent !important;
+      }
+
+      * {
+        color: @text !important;
       }
     }
 
