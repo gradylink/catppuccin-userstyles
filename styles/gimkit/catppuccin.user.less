@@ -435,7 +435,7 @@
       color: @green !important;
     }
 
-    #content > div > div > :not(.flex-column, .flex, .ant-alert, :has(img[src="/client/img/svgLogoWhite.svg"], img[src="/client/img/svgLogo.svg"]), div[style="height: 20px;"], div[style="height: 40px;"], .ant-divider-with-text-center) {
+    #content > div > div:not(.ant-result-404) > :not(.flex-column, .flex, .ant-alert, :has(img[src="/client/img/svgLogoWhite.svg"], img[src="/client/img/svgLogo.svg"]), div[style="height: 20px;"], div[style="height: 40px;"], .ant-divider-with-text-center) {
       background-color: @base;
 
       > :first-child:not(div[style^="height: var(--header-height);"]) {
