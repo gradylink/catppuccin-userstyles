@@ -876,7 +876,7 @@
     }
 
     // News
-    body > div > .ant-modal-root .ant-modal-body > div:first-child:not([style]) {
+    body > div > .ant-modal-root .ant-modal-body > div:first-child:not([style], :has(button)) {
       background-color: @accent;
 
       * {
