@@ -814,7 +814,14 @@
     }
 
     // Season Ticket
-    #cosmos-content .ant-space-item > div:has(img[src^="https://www.gimkit.com/assets/map/stickers/season_"]) {
+
+    // "New!" Badge in nav
+    [style*="background: rgb(0, 153, 51)"] {
+      background-color: @green !important;
+      color: @base;
+    }
+
+    #cosmos-content .ant-space-item > div:has(img[src^="https://www.gimkit.com/assets/map/stickers"]) {
       background-image: linear-gradient(179deg, @peach 0%, @red 100%);
 
       * {
