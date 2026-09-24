@@ -1038,16 +1038,21 @@
     }
 
     // No account warning
-    .ant-alert-warning .ant-alert-message {
-      div,
-      a {
-        color: @base !important;
-      }
+    .ant-alert-warning {
+      background-color: fade(@yellow, 75%) !important;
+      border-color: @yellow !important;
 
-      a {
-        // Accent link doesn't work here (low contrast) and base makes the link invisible.
-        font-weight: bold;
-        text-decoration: underline;
+      .ant-alert-message {
+        div,
+        a {
+          color: @base !important;
+        }
+
+        a {
+          // Accent link doesn't work here (low contrast) and base makes the link invisible.
+          font-weight: bold;
+          text-decoration: underline;
+        }
       }
     }
 
