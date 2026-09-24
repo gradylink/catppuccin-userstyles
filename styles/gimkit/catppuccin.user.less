@@ -467,7 +467,7 @@
     #content > div > div:not(.ant-result-404) > :not(.flex-column, .flex, .ant-alert, :has(img[src="/client/img/svgLogoWhite.svg"], img[src="/client/img/svgLogo.svg"]), div[style="height: 20px;"], div[style="height: 40px;"], .ant-divider-with-text-center) {
       background-color: @base;
 
-      > :first-child:not(div[style^="height: var(--header-height);"]) {
+      > :first-child:not(div[style^="height: var(--header-height);"], [style*="color: rgb(0, 0, 0);"]) {
         background-color: @mantle;
       }
     }
@@ -958,6 +958,46 @@
 
         .ant-btn span {
           background-color: transparent !important;
+        }
+      }
+    }
+
+    #content > div {
+      background-image: none;
+    }
+
+    // No account warning
+    .ant-alert-warning .ant-alert-message {
+      div,
+      a {
+        color: @base !important;
+      }
+
+      a {
+        // Accent link doesn't work here (low contrast) and base makes the link invisible.
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+
+    // Signup page 2 (account type)
+    #content > div > .scroll-y {
+      background-color: @base;
+
+      [style*="color: rgb(0, 0, 0);"] {
+        color: @text !important;
+      }
+
+      [backgroundcolor="#33691e"] {
+        background-color: @crust !important;
+      }
+
+      [backgroundcolor="#9E5F28"] {
+        background-color: @accent !important;
+
+        &,
+        i {
+          color: @base;
         }
       }
     }
