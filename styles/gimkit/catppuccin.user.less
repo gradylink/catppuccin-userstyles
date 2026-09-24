@@ -708,6 +708,10 @@
       }
     }
 
+    .ant-input-outlined:focus {
+      box-shadow: 0 0 0 2px fade(@accent, 10%);
+    }
+
     .ant-modal-body > .maxWidth > :last-child {
       > div:not(.flex-center) > div,
       .ant-space-item > div {
@@ -1039,19 +1043,11 @@
 
     // No account warning
     .ant-alert-warning {
-      background-color: fade(@yellow, 75%) !important;
+      background-color: fade(@yellow, 30%) !important;
       border-color: @yellow !important;
 
-      .ant-alert-message {
-        div,
-        a {
-          color: @base !important;
-        }
-
-        a {
-          // Accent link doesn't work here (low contrast) and base makes the link invisible.
-          text-decoration: underline;
-        }
+      .ant-alert-message div {
+        color: @yellow !important;
       }
     }
 
