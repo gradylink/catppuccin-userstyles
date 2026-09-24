@@ -74,6 +74,32 @@
       div:has(> #reports-container) {
         box-shadow: @crust 0 10px 30px;
         background-color: @base;
+
+        // Filters (student home)
+        .vc.wrap[style="margin-top: 15px;"] > div {
+          background-color: @mantle;
+          border-color: @surface2;
+
+          &.hGZCSx,
+          &.eRFCae {
+            background-color: @accent;
+            border-color: @accent;
+            color: @base;
+          }
+        }
+
+        // Boxes (student home)
+        [style^="border-style: dashed;"] {
+          border-color: @surface2 !important;
+
+          .fa-stars {
+            color: @blue !important;
+          }
+
+          .fa-users-class {
+            color: @green !important;
+          }
+        }
       }
 
       button {
@@ -143,7 +169,8 @@
     .ant-space-item .cYojXN,
     .ant-space-item .gYojnk,
     .ant-space-item .cWGQyr,
-    .ant-space-item .dPbUaE {
+    .ant-space-item .dPbUaE,
+    .ant-space-item .bwNbMj {
       background-color: @accent !important;
 
       &,
@@ -847,6 +874,53 @@
     // Creative Creaton Dialog
     [style="border-color: rgb(255, 255, 0);"] {
       border-color: @accent !important;
+    }
+
+    // Student Home
+    #mainContainer > .flex-column > div > div:has(.hGZCSx, .eRFCae) {
+      background-color: @base;
+      box-shadow: @crust 0 10px 30px;
+
+      // Filters
+      .vc.wrap[style="margin-top: 15px;"] > div {
+        background-color: @mantle;
+        border-color: @surface2;
+
+        &.hGZCSx,
+        &.eRFCae {
+          background-color: @accent;
+          border-color: @accent;
+          color: @base;
+        }
+      }
+
+      // Boxes
+      [style^="border-style: dashed;"] {
+        border-color: @surface2 !important;
+
+        .fa-stars {
+          color: @blue !important;
+        }
+
+        .fa-users-class {
+          color: @green !important;
+        }
+      }
+    }
+
+    // Joining Class
+    #content > div > .flex-center > div {
+      // selector too loose?
+      background-color: @mantle !important;
+
+      > div > .maxWidth {
+        background-color: @base;
+        border-color: @surface2;
+
+        i {
+          color: @green !important;
+        }
+      }
     }
 
     // Season Ticket
